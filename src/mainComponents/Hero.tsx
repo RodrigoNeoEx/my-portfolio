@@ -3,14 +3,18 @@ import React, { useEffect, useState } from 'react';
 import Video from '../assets/Video'
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [vertical, setVertical] = useState(window.innerWidth > 400);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => { 
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener('resize', handleResize);  
+    const handleVertical = () => setVertical(window.innerWidth > 400)
+    window.addEventListener('resize', handleVertical);  
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleVertical);
       
     };
   }, []);
@@ -20,7 +24,7 @@ const Hero = () => {
       <div className={`${isMobile ? "space-y-2 m-5" : "space-y-4 w-3/6"}`}>
         <div className='z-10 relative'>
           <motion.h1
-            className="text-6xl md:text-9xl font-sten leading-tight"
+            className={`${isMobile ? "text-6xl": "text-9xl"} font-sten leading-tight`}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
@@ -28,7 +32,7 @@ const Hero = () => {
             Hello!!!
           </motion.h1>
           <motion.h2
-            className="text-6xl md:text-9xl font-sten leading-tight text-lime-400"
+            className={`${isMobile ? "text-6xl" : "text-9xl"} font-sten leading-tight text-lime-400`} 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
@@ -43,9 +47,9 @@ const Hero = () => {
             </div>
           }          
       </div>
-      <div className="flex flex-col md:flex-row justify-between w-full mt-5">
+      <div className={`flex flex-col md:flex-row justify-between w-full m-2 ${isMobile && vertical ? "pl-20 mt-0" : ""}`}>
         <motion.div
-          className={`text-4xl md:text-5xl font-helv ${isMobile ? "pl-6" : ""}`}
+          className={`text-4xl md:text-5xl font-helv ${isMobile && vertical ? "pl-6" : "pl-4"}`}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
