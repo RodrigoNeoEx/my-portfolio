@@ -16,7 +16,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className={`bg-black text-white min-h-screen flex flex-col  ${isMobile ? "items-center justify-start pt-16" : "px-20 items-start pt-12 justify-center "}`}>  
+    <section className={`bg-black text-white min-h-screen flex flex-col ${isMobile ? "items-center justify-start pt-16" : "px-20 items-start pt-12 justify-center "}`}>  
       <div className={`${isMobile ? "space-y-2 m-5" : "space-y-4 w-3/6"}`}>
         <div className='z-10 relative'>
           <motion.h1
@@ -45,7 +45,7 @@ const Hero = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-between w-full mt-5">
         <motion.div
-          className="text-4xl md:text-5xl font-helv"
+          className={`text-4xl md:text-5xl font-helv ${isMobile ? "pl-6" : ""}`}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
