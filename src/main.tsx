@@ -4,14 +4,16 @@ import './index.css'
 import App from './App.tsx'
 
 import { ThemeProvider } from "@material-tailwind/react";
+import { ScreenProvider } from './context/ScreenContext.tsx';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 
 root.render(
   <React.StrictMode>
     <ThemeProvider>
-      <App />
+      <ScreenProvider>
+        <App />
+      </ScreenProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

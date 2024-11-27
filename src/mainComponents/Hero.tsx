@@ -1,23 +1,10 @@
 import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
-import Video from '../assets/Video'
+import React from 'react';
+import Video from '../assets/Video';
+import { useScreen } from "../context/ScreenContext";
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [vertical, setVertical] = useState(window.innerWidth > 400);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => { 
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);  
-    const handleVertical = () => setVertical(window.innerWidth > 400)
-    window.addEventListener('resize', handleVertical);  
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('resize', handleVertical);
-      
-    };
-  }, []);
+  const { isMobile, vertical, isLoaded, setIsLoaded } = useScreen();
 
   return (
     <section className={`bg-black text-white min-h-screen flex flex-col ${isMobile ? "items-center justify-start pt-16" : "px-20 items-start pt-12 justify-center "}`}>  
