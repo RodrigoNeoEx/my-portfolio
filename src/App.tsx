@@ -1,12 +1,12 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Portfolio from './components/Portfolio';
-import Footer from './components/Footer';
+import DynamicHeader from "./mainComponents/DynamicHeader";
+import Footer from "./mainComponents/Footer";
+import Hero from "./mainComponents/Hero";
+import Portfolio from "./mainComponents/Portfolio";
 
 function App() {
   return (
     <div> 
-      <Header />
+      <DynamicHeader />
       <Hero />
       <Portfolio />
       <Footer />

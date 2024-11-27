@@ -1,8 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'], // Garante que Tailwind processe os arquivos JSX/TSX
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+export default withMT({
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}", // Garanta que as extensões estão corretas
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sten: ['Stencilia-Bold'],
+        helv: ['HelveticaNeue'],
+        logo: ['Circles_New'],
+      },
+    },
   },
   plugins: [],
-};
+});
