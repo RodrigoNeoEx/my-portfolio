@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useScreen } from '../context/ScreenContext';
 
 type HamburguerHeaderProps = {
   lineText: string[];
   isMobile: boolean;
 }
 
-const HamburguerHeader = ({lineText, isMobile}: HamburguerHeaderProps) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);  
+const HamburguerHeader = ({lineText}: HamburguerHeaderProps) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isMobile, vertical } = useScreen();
+
 
   const navContainer = {
     visible: {
@@ -71,7 +74,7 @@ const HamburguerHeader = ({lineText, isMobile}: HamburguerHeaderProps) => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}            
         >
           {isMenuOpen 
-          ? <motion.div className='backdrop-blur-lg rounded-xl font-logo text-6xl pt-0'> N </motion.div>
+          ? <motion.div className='backdrop-blur-lg rounded-xl font-logo text-6xl pt-0 leading-10'> N </motion.div>
           : <FaBars className='backdrop-blur-lg rounded-xl'/>}
         </button>
       </div>
@@ -92,11 +95,10 @@ const HamburguerHeader = ({lineText, isMobile}: HamburguerHeaderProps) => {
               exit="hidden"
               variants={navList}
             > 
-              {lineText.map((iten, i) => {        
-                console.log(isMobile)     
+              {lineText.map((iten, i) => {  
                 return (
                  <motion.li className="nav-item py-1" variants={navItem} key={i}>
-                 <a href="#home" className={`block text-center hover:text-lime-400 text-3xl ${isMobile ? "text-xl" : "text-3xl"}`}>{iten}</a>
+                 <a href="#home" className={`block text-center hover:text-lime-400 ${isMobile && !vertical ? "text-xl" : "text-3xl"}`}>{iten}</a>
                  
                </motion.li>
                 )
