@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-
 
 type HamburguerHeaderProps = {
   lineText: string[];
-  mobile: boolean;
+  isMobile: boolean;
 }
 
-const HamburguerHeader = ({lineText, mobile}: HamburguerHeaderProps) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const HamburguerHeader = ({lineText, isMobile}: HamburguerHeaderProps) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);  
+
   const navContainer = {
     visible: {
       x: 0,
@@ -62,16 +62,16 @@ const HamburguerHeader = ({lineText, mobile}: HamburguerHeaderProps) => {
       }
     }
   };
-console.log(mobile)
+
   return (
     <header className="text-white py-4 px-8 fixed top-0 left-0 w-full z-50">
-      <div className={`flex items-center ${mobile ? "justify-end": "justify-center"}`}>       
+      <div className={`flex items-center justify-center`}>       
         <button          
           className="text-4xl"
           onClick={() => setIsMenuOpen(!isMenuOpen)}            
         >
           {isMenuOpen 
-          ? <motion.div className='backdrop-blur-lg rounded-xl font-logo text-6xl'> N </motion.div>
+          ? <motion.div className='backdrop-blur-lg rounded-xl font-logo text-6xl pt-0'> N </motion.div>
           : <FaBars className='backdrop-blur-lg rounded-xl'/>}
         </button>
       </div>
@@ -92,10 +92,12 @@ console.log(mobile)
               exit="hidden"
               variants={navList}
             > 
-              {lineText.map((iten, i) => {             
+              {lineText.map((iten, i) => {        
+                console.log(isMobile)     
                 return (
                  <motion.li className="nav-item py-1" variants={navItem} key={i}>
-                 <a href="#home" className="block text-center hover:text-lime-400 text-3xl">{iten}</a>
+                 <a href="#home" className={`block text-center hover:text-lime-400 text-3xl ${isMobile ? "text-xl" : "text-3xl"}`}>{iten}</a>
+                 
                </motion.li>
                 )
               })}              

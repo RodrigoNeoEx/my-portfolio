@@ -1,25 +1,12 @@
-import { useState, useEffect } from 'react';
 import HamburguerHeader from '@/genericComponents/HamburguerHeader';
 import StaticHeader from '@/genericComponents/StaticHeader';
+import { useScreen } from "../context/ScreenContext";
 
 
 const DynamicHeader = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const { isMobile, isScrolled } = useScreen();
 
-  // Detecta a rolagem da página
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 199);
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
   
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-  
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const itens = {
     name: ["Home", "About", "Projects", "Contact"]
@@ -27,6 +14,7 @@ const DynamicHeader = () => {
   
   return (
     <div className="relative">      
+    
       <div
         className={`transition-opacity duration-500 ${
           isMobile || isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'

@@ -34,7 +34,7 @@ const Hero = () => {
             </div>
           }          
       </div>
-      <div className={`flex flex-col md:flex-row justify-between w-full m-2 ${isMobile && vertical ? "pl-20 mt-0" : ""}`}>
+      <div className={`flex flex-col md:flex-row justify-between w-full m-2 ${isMobile && vertical ? "pl-20 mt-0" : ""}`}>   
         <motion.div
           className={`text-4xl md:text-5xl font-helv ${isMobile && vertical ? "pl-6" : "pl-4"}`}
           initial={{ opacity: 0, x: -50 }}
