@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 interface ScreenContextProps {
   isMobile: boolean;
   vertical: boolean;
+  horizontalMob: boolean;
   isLoaded: boolean;
   isScrolled: boolean
   setIsLoaded: (loaded: boolean) => void;
@@ -13,13 +14,15 @@ const ScreenContext = createContext<ScreenContextProps | undefined>(undefined);
 export const ScreenProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [vertical, setVertical] = useState(window.innerWidth > 400);
+  const [horizontalMob, setHorizontalMob] = useState(window.innerHeight < 550);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleMobile = () => {
       setIsMobile(window.innerWidth < 768);
-      setVertical(window.innerWidth > 400);    
+      setVertical(window.innerWidth > 400);
+      setHorizontalMob(window.innerHeight < 550)    
     };
 
     const handleScroll = () => setIsScrolled(window.scrollY > 100);    
@@ -36,7 +39,7 @@ export const ScreenProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
   return (
-    <ScreenContext.Provider value={{ isMobile, vertical, isLoaded, isScrolled, setIsLoaded }}>
+    <ScreenContext.Provider value={{ isMobile, vertical, isLoaded, isScrolled, horizontalMob, setIsLoaded }}>
       {children}
     </ScreenContext.Provider>
   );
