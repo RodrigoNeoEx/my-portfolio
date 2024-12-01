@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import bg from './bg tech.webp'
+import bg from './bgTech.jpg'
 
 type SvgTech = {
   onLoaded: () => void;
