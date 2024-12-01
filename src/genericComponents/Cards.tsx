@@ -21,7 +21,7 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
       placeholder={undefined} 
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
-      className="mt-6 w-full justify-between"
+      className="mt-6 w-11/12 justify-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 "
     >
       <CardHeader
         placeholder={undefined}

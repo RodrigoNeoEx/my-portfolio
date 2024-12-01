@@ -2,11 +2,17 @@ import { useEffect, useState } from 'react';
 import api from '../assets/fakeAPI';
 import Cards from '../genericComponents/Cards';
 
+interface PortfolioData {
+  portfolio: { title: string; body: string; button: string }[];
+}
+
+
 const Portfolio = () => {  
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState<{ title: string; body: string; button: string }[]>([]);
+
 
   useEffect(() => {
-    api.get('/portfolioCards').then((response) => {
+    api.get<PortfolioData>('/portfolioCards').then((response) => {
       setCards(response.data.portfolio); 
     });
   }, []);
