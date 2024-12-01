@@ -1,26 +1,21 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],  
- "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true, // Permite arquivos JS e JSX
-    "checkJs": false, // Desativa a verificação de tipos em JS
-    "jsx": "react-jsx", // Habilita o suporte a JSX moderno
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler", // OU node16
+    "skipLibCheck": true,
+    "noEmit": true,
+    "composite": true,
     "strict": true,
+    "allowImportingTsExtensions": true,
+    "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
-      "@/": ["src/*"]
-    }
+      "@/*": ["src/*"]
+    },
+    "isolatedModules": true
   },
   "include": ["src"],
   "exclude": ["node_modules"]
-  
 }
