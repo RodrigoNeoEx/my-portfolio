@@ -8,7 +8,14 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-const Cards = () => {
+type CardsProps = {
+  cardTitle: string;
+  cardBodyText: string;
+  cardButtonText: string;
+}
+
+
+const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
   return (
     <Card 
       placeholder={undefined} 
@@ -38,16 +45,14 @@ const Cards = () => {
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
         >
-          UI/UX Review Check
+          {cardTitle}
         </Typography>
         <Typography 
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
         >
-          The place is close to Barceloneta Beach and bus stop just 2 min by
-          walk and near to "Naviglio", where you can enjoy the main night life
-          in Barcelona.
+          {cardBodyText}
         </Typography>
       </CardBody>
       <CardFooter 
@@ -63,7 +68,7 @@ const Cards = () => {
           onPointerEnterCapture={undefined} 
           onPointerLeaveCapture={undefined}
         >
-          Read More
+          {cardButtonText}
         </Button>
       </CardFooter>
     </Card>
