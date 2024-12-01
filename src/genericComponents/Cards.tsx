@@ -21,7 +21,7 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
       placeholder={undefined} 
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
-      className="mt-6 w-96"
+      className="mt-6 w-full justify-between"
     >
       <CardHeader
         placeholder={undefined}
@@ -35,7 +35,7 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
       <CardBody
         placeholder={undefined}
         onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
+        onPointerLeaveCapture={undefined}      
       >
         <Typography 
           variant="h5"
@@ -56,17 +56,17 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
         </Typography>
       </CardBody>
       <CardFooter 
-        className="pt-0"
+        className="flex justify-center"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
+        onPointerLeaveCapture={undefined} 
       >
         <Button
           color="blue"
           onClick={() => alert("Button clicked!")}
           placeholder={undefined}
           onPointerEnterCapture={undefined} 
-          onPointerLeaveCapture={undefined}
+          onPointerLeaveCapture={undefined}         
         >
           {cardButtonText}
         </Button>
