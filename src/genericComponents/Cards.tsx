@@ -67,7 +67,7 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
           placeholder={undefined}
           onPointerEnterCapture={undefined} 
           onPointerLeaveCapture={undefined}
-          className="bg-lime-400 text-black font-bold font-helv hover:scale-125"         
+          className="bg-lime-400 text-black font-bold font-helv hover:animate-pulse"         
         >
           {cardButtonText}
         </Button>

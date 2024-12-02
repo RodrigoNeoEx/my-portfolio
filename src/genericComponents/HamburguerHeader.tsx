@@ -94,16 +94,16 @@ const HamburguerHeader = ({lineText}: HamburguerHeaderProps) => {
               animate="visible"
               exit="hidden"
               variants={navList}
-            > 
+            >             
               {lineText.map((iten, i) => {  
                 return (
                  <motion.li className="nav-item py-1" variants={navItem} key={i}>
-                 <a href="#home" className={`block text-center hover:text-lime-400 ${isMobile && !vertical ? "text-xl" : "text-3xl"}`}>{iten}</a>
+                 <a href="#home" className={`block text-center hover:text-lime-400 ${!vertical ? "text-lg" : "text-4xl"} font-sten`}>{iten}</a>
                  
                </motion.li>
                 )
               })}              
-            </motion.ul>
+            </motion.ul>        
           </motion.div>
         </AnimatePresence>  
       )}
