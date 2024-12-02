@@ -16,18 +16,18 @@ type CardsProps = {
 
 
 const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
+  
   return (
     <Card 
       placeholder={undefined} 
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
-      className="mt-6 w-11/12 justify-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 "
+      className="mt-6 w-11/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-black justify-between"
     >
       <CardHeader
         placeholder={undefined}
         onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-        color="blue-gray"
+        onPointerLeaveCapture={undefined}        
         className="relative h-56"
       >
         <img src={bgTech} alt="card-image" />
@@ -38,9 +38,8 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
         onPointerLeaveCapture={undefined}      
       >
         <Typography 
-          variant="h5"
-          color="blue-gray"
-          className="mb-2"
+          variant="h5"          
+          className="mb-2 text-lime-400 font-sten text-3xl"
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
@@ -51,26 +50,29 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
+          className="text-white font-helv text-lg text-left"
         >
           {cardBodyText}
         </Typography>
       </CardBody>
+      <div>
       <CardFooter 
-        className="flex justify-center"
+        // className="flex justify-center"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined} 
       >
-        <Button
-          color="blue"
+        <Button          
           onClick={() => alert("Button clicked!")}
           placeholder={undefined}
           onPointerEnterCapture={undefined} 
-          onPointerLeaveCapture={undefined}         
+          onPointerLeaveCapture={undefined}
+          className="bg-lime-400 text-black font-bold font-helv hover:scale-125"         
         >
           {cardButtonText}
         </Button>
       </CardFooter>
+      </div>
     </Card>
   );
 };
