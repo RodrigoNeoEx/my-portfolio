@@ -28,6 +28,18 @@ mock.onGet('/portfolioCards').reply(200, {
   mock.onGet('/frontProjects').reply(200, {
     frontEnd: [
         {
+            title: 'https://www.advicesystem.com.br/',
+            body: "Construction and implementation of various solutions within the school system system such as online enrollment, timetable, control of indicators, academic and pedagogical management, school and administrative KPI'S, etc. The main tools used were: JS, TypeScript, ReactJs, NextJs, Material-UI and StyledComponents.",
+            button: 'See the Employer',
+            link: 'https://www.advicesystem.com.br/home',
+        },
+        {
+            title: '+ você by Wiz',
+            body: "I coordinated and actively worked on integration, development and internal communication. We developed a new platform that optimized processes for commercial management, customer registration, monitoring of commissions and KPI'S. The main tools used were: JS, ReactJs, NextJs, Material-UI and StyledComponents.",
+            button: 'See the Employer',
+            link: 'https://wizmaisvoce.com.br/',
+        },
+        {
             title: 'Coodesh',
             body: 'With the main tools used being JS, Next JS, ReactJs and NodeJS, I participated in all construction and implementation of the pages as well as maintenance and bug fixes.',
             button: 'See the Page',
@@ -38,12 +50,6 @@ mock.onGet('/portfolioCards').reply(200, {
             body: 'Built and managed the landing page construction team, technologies used were: ReactJS, NextJS, TypeScript, JS and StyledComponents',
             button: 'See the Page',
             link: 'https://www.prorise.net.br/',
-        },
-        {
-            title: 'https://www.advicesystem.com.br/',
-            body: "Construction and implementation of various solutions within the school system system such as online enrollment, timetable, control of indicators, academic and pedagogical management, school and administrative KPI'S, etc. The main tools used were: JS, TypeScript, ReactJs, NextJs, Material-UI and StyledComponents.",
-            button: 'See the Employer',
-            link: 'https://www.advicesystem.com.br/home',
         },
         {
             title: 'GitHub',
