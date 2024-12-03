@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import bg from './bgTech.jpg'
+import videoT from './dados formando o mundo.mp4'
 
 type SvgTech = {
   onLoaded: () => void;
@@ -34,13 +35,20 @@ const SvgTech = ({ onLoaded }: SvgTech) => {
       </defs>
 
       {/* Aplicar imagem ao fundo com máscara */}
-      <image
-        href={bg} // Caminho correto da imagem
-        width="100vh"
-        height="100vh"
+      <foreignObject
+        width="100%"
+        height="92%"
         clipPath="url(#customShape)"
-        preserveAspectRatio="xMidYMid slice" 
-      />
+      >
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted          
+        >
+          <source src={videoT} type="video/mp4" />
+        </video>
+      </foreignObject>
     </svg>
   );
 };
