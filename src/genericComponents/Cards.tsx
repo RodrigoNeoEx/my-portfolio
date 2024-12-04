@@ -1,3 +1,4 @@
+import { useState } from "react";
 import bgTech from "../assets/bgTech.jpg";
 import {
   Card,
@@ -6,6 +7,7 @@ import {
   CardFooter,
   Typography,
   Button,
+  Collapse,
 } from "@material-tailwind/react";
 
 type CardsProps = {
@@ -19,7 +21,10 @@ type CardsProps = {
 
 const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLink }: CardsProps) => {
 
-  
+  const [open, setOpen] = useState(false);
+ 
+  const toggleOpen = () => setOpen((cur) => !cur);
+
   return (
     <Card 
       placeholder={undefined} 
@@ -42,21 +47,32 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLi
       >
         <Typography 
           variant="h5"          
-          className="mb-2 text-lime-400 font-sten text-3xl"
+          className="mb-2 text-lime-400 font-sten text-3xl flex justify-between"
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
         >
           {cardTitle}
+          <Button          
+            onClick={toggleOpen}
+            placeholder={undefined}
+            onPointerEnterCapture={undefined} 
+            onPointerLeaveCapture={undefined}
+            className="bg-transparent text-lime-400 font-bold font-helv animate-pulse text-6xl leading-3 relative left-0"         
+          >
+            {!open ? "+" : "-"}
+          </Button>
         </Typography>
-        <Typography 
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-          className="text-white font-helv text-lg text-left"
-        >
-          {cardBodyText}
-        </Typography>
+        <Collapse open={open}>
+          <Typography 
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+            className="text-white font-helv text-lg text-left"
+          >
+            {cardBodyText}
+          </Typography>
+        </Collapse>
       </CardBody>
       <div>
       <CardFooter 

@@ -32,11 +32,11 @@ const Projects = ({workType}: ProjectsProps) => {
     useEffect(() => {   
         workType === "frontEnd" 
         ? api.get<FrontEndProps>(`/frontProjects`).then((response) => {
-            setTitle('Front End Developer')
+            setTitle('FrontEnd Developer')
             return setCards(response.data.frontEnd); 
           })
         : api.get<ProjectManangerProps>(`/pmProjects`).then((response) => {
-            setTitle('Project Mananger')
+            setTitle('Mananger')
             return setCards(response.data.projectMananger); 
 
         });
@@ -49,7 +49,7 @@ const Projects = ({workType}: ProjectsProps) => {
                     {`Projects as ${title}`}
                 </motion.h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
+            <div className="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-10 justify-items-center">
                 {cards.map((itens, index) => (
                     <Cards 
                         key={index} 
