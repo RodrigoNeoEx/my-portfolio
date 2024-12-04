@@ -11,11 +11,14 @@ import {
 type CardsProps = {
   cardTitle: string;
   cardBodyText: string;
-  cardButtonText: string;
+  cardButtonText: string; 
+  cardLink: string;
+  buttonFunction: () => void;
 }
 
 
-const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
+const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLink }: CardsProps) => {
+
   
   return (
     <Card 
@@ -63,7 +66,7 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText }: CardsProps) => {
         onPointerLeaveCapture={undefined} 
       >
         <Button          
-          onClick={() => alert("Button clicked!")}
+          onClick={buttonFunction}
           placeholder={undefined}
           onPointerEnterCapture={undefined} 
           onPointerLeaveCapture={undefined}
