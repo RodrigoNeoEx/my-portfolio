@@ -12,20 +12,26 @@ const Portfolio = () => {
   const [cards, setCards] = useState<{ title: string; body: string; button: string; functionId: string; link: string; }[]>([]);
   const [projectType, setProjectType] = useState('null')
   const [isVisible, setIsVisible] = useState<boolean>(false);
-
+  
+  const handleClick = (functionId: string) => {
+    setIsVisible(false); 
+    setProjectType(functionId); 
+    setIsVisible(true);
+    const section = document.getElementById("projectsSection");
+    setTimeout(() => {
+      if (section) {
+        
+        return section.scrollIntoView({ behavior: 'smooth' });
+      } 
+    }, 200); 
+  };
+  
   useEffect(() => {
     api.get<PortfolioData>('/portfolioCards').then((response) => {
       setCards(response.data.portfolio); 
     });
   }, []);
 
-  const handleClick = (functionId: string) => {
-    setIsVisible(false); 
-    setTimeout(() => {
-      setProjectType(functionId); 
-      setIsVisible(true); 
-    }, 300); 
-  };
   
     return (
       <>
@@ -46,11 +52,13 @@ const Portfolio = () => {
             </div>
           </div>        
         </section>
+
         <div
-          className={`transition-all duration-700 ease-in-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-          } overflow-hidden`}
-        >
+          id="projectsSection" 
+          className={`transition-all duration-700 ease-in-out overflow-hidden pt-10
+            ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+            >
+
         {projectType != 'null' && <Projects workType={projectType} />}
         </div>
       </>

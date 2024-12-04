@@ -37,7 +37,7 @@ const Video = ({ onLoaded } : VideoProps ) => {
           className="w-full h-full object-cover"
           autoPlay
           loop
-          muted
+          muted          
         >
           <source src={videoT} type="video/mp4" />
         </video>

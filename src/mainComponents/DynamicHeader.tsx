@@ -13,8 +13,7 @@ const DynamicHeader = () => {
   }
   
   return (
-    <div className="relative">      
-    
+    <div className="relative">  
       <div
         className={`transition-opacity duration-500 ${
           isMobile || isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
@@ -23,16 +22,15 @@ const DynamicHeader = () => {
         <StaticHeader />
       </div>
       <div
-        className={`transition-opacity duration-500 ${
-          isMobile || isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
+        className={
+          `transition-opacity duration-500 
+          ${isMobile || isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`
+        }
       >
-        <HamburguerHeader lineText={itens.name} mobile={isMobile}/>
+        <HamburguerHeader lineText={itens.name} />
       </div>
     </div>
   );
-
-  // Renderiza o StaticHeader em desktop sem rolagem
 };
 
 export default DynamicHeader;

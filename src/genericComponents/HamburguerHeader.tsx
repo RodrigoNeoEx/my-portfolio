@@ -5,12 +5,11 @@ import { useScreen } from '../context/ScreenContext';
 
 type HamburguerHeaderProps = {
   lineText: string[];
-  isMobile: boolean;
 }
 
 const HamburguerHeader = ({lineText}: HamburguerHeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isMobile, vertical } = useScreen();
+  const { vertical } = useScreen();
 
 
   const navContainer = {
@@ -74,22 +73,22 @@ const HamburguerHeader = ({lineText}: HamburguerHeaderProps) => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}            
         >
           {isMenuOpen 
-          ? <motion.div className='backdrop-blur-lg rounded-xl font-logo text-6xl pt-0 leading-10'> N </motion.div>
-          : <FaBars className='backdrop-blur-lg rounded-xl'/>}
+          ? <motion.div className='backdrop-blur-lg font-logo text-6xl pt-0 leading-10 bg-black'> N </motion.div>
+          : <FaBars className='backdrop-blur-lg bg-black'/>}
         </button>
       </div>
       
       {isMenuOpen && (
         <AnimatePresence>
           <motion.div           
-            className="text-white flex justify-center items-center-full"                      
+            className="text-white flex justify-center items-center"                      
             initial="hidden"
             animate={isMenuOpen ? "visible" : "hidden"}
             exit="hidden"
             variants={navContainer}
           >
             <motion.ul
-              className="grid gap-4 grid-cols-4 backdrop-blur-lg"
+              className="grid gap-4 grid-cols-4 backdrop-blur-lg bg-black"
               initial="hidden"
               animate="visible"
               exit="hidden"
@@ -97,10 +96,9 @@ const HamburguerHeader = ({lineText}: HamburguerHeaderProps) => {
             >             
               {lineText.map((iten, i) => {  
                 return (
-                 <motion.li className="nav-item py-1" variants={navItem} key={i}>
-                 <a href="#home" className={`block text-center hover:text-lime-400 ${!vertical ? "text-lg" : "text-4xl"} font-sten`}>{iten}</a>
-                 
-               </motion.li>
+                <motion.li className="nav-item py-1" variants={navItem} key={i}>
+                  <a href="#home" className={`block text-center hover:text-lime-400 ${!vertical ? "text-lg" : "text-4xl"} font-sten`}>{iten}</a>                 
+                </motion.li>
                 )
               })}              
             </motion.ul>        
