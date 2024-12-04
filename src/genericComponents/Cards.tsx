@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CgArrowDownO, CgArrowUpO ,  } from "react-icons/cg";
 import bgTech from "../assets/bgTech.jpg";
 import {
   Card,
@@ -43,11 +44,12 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLi
       <CardBody
         placeholder={undefined}
         onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}      
+        onPointerLeaveCapture={undefined}
+        className="pt-0"      
       >
         <Typography 
           variant="h5"          
-          className="mb-2 text-lime-400 font-sten text-3xl flex justify-between"
+          className="mb-2 text-lime-400 font-sten text-3xl flex justify-between items-center"
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
@@ -58,9 +60,12 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLi
             placeholder={undefined}
             onPointerEnterCapture={undefined} 
             onPointerLeaveCapture={undefined}
-            className="bg-transparent text-lime-400 font-bold font-helv animate-pulse text-6xl leading-3 relative left-0"         
+            className="bg-transparent text-lime-400 font-black font-helv animate-pulse text-6xl leading-3"         
           >
-            {!open ? "+" : "-"}
+            <div>
+
+            {!open ? <CgArrowDownO /> : <CgArrowUpO />}
+            </div>
           </Button>
         </Typography>
         <Collapse open={open}>
