@@ -45,7 +45,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >     
-          <p className='text-6x1'>Project Mananger</p>
+          <p className='text-6x1'>Project Mananger & </p>
           <p>FrontEnd Developer</p>  
         </motion.div>       
       </div>  

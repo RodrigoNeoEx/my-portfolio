@@ -13,6 +13,7 @@ interface FrontEndProps {
         body: string; 
         button: string;
         link: string;
+        image: string;
     }[];
 }
 
@@ -22,12 +23,13 @@ interface ProjectManangerProps {
         body: string; 
         button: string;
         link: string;
+        image: string;
     }[],
 }
 
 const Projects = ({workType}: ProjectsProps) => {
     const [title, setTitle] = useState('')
-    const [cards, setCards] = useState<{ title: string; body: string; button: string; link:string }[]>([]);
+    const [cards, setCards] = useState<{ title: string; body: string; button: string; link:string; image:string; }[]>([]);
 
     useEffect(() => {   
         workType === "frontEnd" 
@@ -57,7 +59,8 @@ const Projects = ({workType}: ProjectsProps) => {
                         cardBodyText={itens.body}
                         cardButtonText={itens.button}
                         cardLink={itens.link}
-                        buttonFunction={() => console.log("hey")} 
+                        buttonFunction={() => console.log("hey")}
+                        cardImage={itens.image} 
                     />
                 ))}
             </div>

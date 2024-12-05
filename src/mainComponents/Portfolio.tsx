@@ -4,12 +4,19 @@ import Cards from '../genericComponents/Cards';
 import Projects from '@/genericComponents/Projects';
 
 interface PortfolioData {
-  portfolio: { title: string; body: string; button: string, functionId: string; link: string; }[];
+  portfolio: { 
+    title: string; 
+    body: string;
+    button: string, 
+    functionId: string; 
+    link: string;
+    image: string;
+  }[];
 }
 
 
 const Portfolio = () => {  
-  const [cards, setCards] = useState<{ title: string; body: string; button: string; functionId: string; link: string; }[]>([]);
+  const [cards, setCards] = useState<{ title: string; body: string; button: string; functionId: string; link: string; image: string; }[]>([]);
   const [projectType, setProjectType] = useState('null')
   const [isVisible, setIsVisible] = useState<boolean>(false);
   
@@ -19,8 +26,7 @@ const Portfolio = () => {
     setIsVisible(true);
     const section = document.getElementById("projectsSection");
     setTimeout(() => {
-      if (section) {
-        
+      if (section) {        
         return section.scrollIntoView({ behavior: 'smooth' });
       } 
     }, 200); 
@@ -47,6 +53,7 @@ const Portfolio = () => {
                   cardButtonText={itens.button}               
                   buttonFunction={() => handleClick(itens.functionId)}
                   cardLink={itens.link || '#'}
+                  cardImage={itens.image}
                 />
               ))}
             </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CgArrowDownO, CgArrowUpO ,  } from "react-icons/cg";
-import bgTech from "../assets/bgTech.jpg";
+import bgTech from "/bgTech.jpg";
 import {
   Card,
   CardHeader,
@@ -16,11 +16,12 @@ type CardsProps = {
   cardBodyText: string;
   cardButtonText: string; 
   cardLink: string;
+  cardImage: string;
   buttonFunction: () => void;
 }
 
 
-const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLink }: CardsProps) => {
+const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLink, cardImage }: CardsProps) => {
 
   const [open, setOpen] = useState(false);
  
@@ -37,9 +38,9 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLi
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}        
-        className="relative h-56"
+        className="relative h-56 flex items-center justify-center"
       >
-        <img src={bgTech} alt="card-image" />
+        <img src={cardImage} alt="card-image" className="object-contain max-w-full"/>
       </CardHeader>
       <CardBody
         placeholder={undefined}
