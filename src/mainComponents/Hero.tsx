@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Video from '../assets/Video';
 import { useScreen } from "../context/ScreenContext";
-import SvgTech from '../assets/SvgTech';
+import VideoMobile from '../assets/VideoMobile';
 
 const Hero = () => {
   const { isMobile, vertical, isLoaded, setIsLoaded, horizontalMob } = useScreen();
@@ -31,7 +31,7 @@ const Hero = () => {
         </div>          
           { isMobile
           ? <div className={`transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} z-0 bottom-0`}>
-              <SvgTech onLoaded={() => setIsLoaded(true)}/>
+              <VideoMobile onLoaded={() => setIsLoaded(true)}/>
             </div>
           : <div className={`transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} z-0`}>
               <Video onLoaded={() => setIsLoaded(true)}/>

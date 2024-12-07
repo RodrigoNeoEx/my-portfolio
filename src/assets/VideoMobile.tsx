@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import bg from './bgTech.jpg'
 import videoT from './dados formando o mundo.mp4'
 
-type SvgTech = {
+type VideoMobile = {
   onLoaded: () => void;
 }
 
-const SvgTech = ({ onLoaded }: SvgTech) => {
+const VideoMobile = ({ onLoaded }: VideoMobile) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (onLoaded) {
@@ -53,6 +53,6 @@ const SvgTech = ({ onLoaded }: SvgTech) => {
   );
 };
 
-export default SvgTech;
+export default VideoMobile;
 
 

@@ -59,7 +59,7 @@ const Projects = ({workType}: ProjectsProps) => {
                         cardBodyText={itens.body}
                         cardButtonText={itens.button}
                         cardLink={itens.link}
-                        buttonFunction={() => console.log("hey")}
+                        buttonFunction={() =>  window.open(itens.link, "_blank", "noopener,noreferrer")}
                         cardImage={itens.image} 
                     />
                 ))}

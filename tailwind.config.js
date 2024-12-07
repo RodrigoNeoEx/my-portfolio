@@ -12,6 +12,9 @@ export default withMT({
         helv: ["HelveticaNeue"],
         logo: ["Circles_New"],
       },
+      fontSize: {
+        '10xl': '35rem',
+      },
     },
   },
   plugins: [],

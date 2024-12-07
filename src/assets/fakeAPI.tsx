@@ -89,7 +89,7 @@ mock.onGet('/portfolioCards').reply(200, {
             title: 'PRORISE / Cast Group',
             body: "I directly contributed to ProRise's business expansion through the strategic capture of new projects and the efficient allocation of talent. I worked on forming teams for future projects, aligning skills with customer needs and ensuring the operational success and sustainable growth of the organization.",
             button: 'See the Employer',
-            link: 'https://coodesh.com/',
+            link: 'https://www.prorise.net.br/',
             image: "/assets/pr.png"
         },
         {

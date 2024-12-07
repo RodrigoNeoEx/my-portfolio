@@ -1,3 +1,4 @@
+import About from "./mainComponents/About";
 import DynamicHeader from "./mainComponents/DynamicHeader";
 import Footer from "./mainComponents/Footer";
 import Hero from "./mainComponents/Hero";
@@ -8,6 +9,7 @@ function App() {
     <div> 
       <DynamicHeader />
       <Hero />
+      <About />
       <Portfolio />
       <Footer />
     </div>
