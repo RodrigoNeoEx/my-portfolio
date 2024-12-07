@@ -5,7 +5,7 @@ import { useScreen } from "../context/ScreenContext";
 const About = () => {
     const { isMobile, vertical, isLoaded, setIsLoaded, horizontalMob } = useScreen(); 
     return (
-        <section className="bg-black py-16 px-8">
+        <section className="bg-black py-28 px-8">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"> 
                 <div className="relative flex justify-center items-center w-[300px] h-[300px] mx-auto">
                     <motion.div
@@ -60,25 +60,7 @@ const About = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7 }}
                     >
-                        Como profissional sou{" "}
-                        <span className="text-lime-400 font-helv">dinâmico</span>, com
-                        experiência em gestão de projetos de TI e{" "}
-                        <span className="text-lime-400 font-helv">
-                        forte habilidade em comunicação e trabalho em equipe
-                        </span>
-                        . Com uma visão integrada dos negócios, adquirida através de
-                        passagens por diferentes áreas, consigo{" "}
-                        <span className="text-lime-400 font-helv">
-                        conectar necessidades de TI aos objetivos estratégicos da empresa
-                        </span>
-                        . Sou adaptável e{" "}
-                        <span className="text-lime-400 font-helv">focado em soluções</span>
-                        , sempre pronto para enfrentar novos desafios com uma abordagem
-                        prática e colaborativa, promovendo{" "}
-                        <span className="text-lime-400 font-helv">
-                        resultados que agregam valor
-                        </span>{" "}
-                        e impulsionam.
+                        As a professional, I am{" "} <span className="text-lime-400 font-helv">dynamic</span>, with experience in IT project management and{" "} <span className="text-lime-400 font-helv"> strong communication skills and teamwork abilities </span> . With an integrated vision of business, acquired through experiences in different areas, I am able to{" "} <span className="text-lime-400 font-helv"> align IT needs with the strategic objectives of the company </span> . I am adaptable and{" "} <span className="text-lime-400 font-helv">solution-oriented</span>, always ready to face new challenges with a practical and collaborative approach, driving{" "} <span className="text-lime-400 font-helv"> results that add value </span>{" "} and growth.
                     </motion.h1>
                 </div>
             </div>
