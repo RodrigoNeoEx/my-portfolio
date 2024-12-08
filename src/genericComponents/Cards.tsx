@@ -32,7 +32,7 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLi
       placeholder={undefined} 
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
-      className="mt-6 w-11/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 bg-black justify-between"
+      className="mt-6 w-11/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 bg-black justify-between shadow-[0_0_10px_1px_rgb(212,225,87,0.55)]"
     >
       <CardHeader
         placeholder={undefined}

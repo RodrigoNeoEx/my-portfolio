@@ -51,7 +51,7 @@ const Projects = ({workType}: ProjectsProps) => {
                     {`Projects as ${title}`}
                 </motion.h1>
             </div>
-            <div className="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-10 justify-items-center">
+            <div className="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-10 justify-items-center pb-8 px-8">
                 {cards.map((itens, index) => (
                     <Cards 
                         key={index} 

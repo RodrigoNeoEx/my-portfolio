@@ -60,7 +60,7 @@ const About = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7 }}
                     >
-                        As a professional, I am{" "} <span className="text-lime-400 font-helv">dynamic</span>, with experience in IT project management and{" "} <span className="text-lime-400 font-helv"> strong communication skills and teamwork abilities </span> . With an integrated vision of business, acquired through experiences in different areas, I am able to{" "} <span className="text-lime-400 font-helv"> align IT needs with the strategic objectives of the company </span> . I am adaptable and{" "} <span className="text-lime-400 font-helv">solution-oriented</span>, always ready to face new challenges with a practical and collaborative approach, driving{" "} <span className="text-lime-400 font-helv"> results that add value </span>{" "} and growth.
+                        As a professional, I am{" "} <span className="text-lime-400 font-helv">dynamic</span>, with experience in IT project management and{" "} <span className="text-lime-400 font-helv"> strong communication skills and teamwork abilities </span> . With an integrated vision of business, acquired through experiences in different areas, I am able to{" "} <span className="text-lime-400 font-helv"> align IT needs with the strategic objectives of the company</span>. I am adaptable and{" "} <span className="text-lime-400 font-helv">solution-oriented</span>, always ready to face new challenges with a practical and collaborative approach, driving{" "} <span className="text-lime-400 font-helv"> results that add value </span>{" "} and growth.
                     </motion.h1>
                 </div>
             </div>
