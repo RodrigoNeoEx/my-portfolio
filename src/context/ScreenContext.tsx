@@ -7,6 +7,8 @@ interface ScreenContextProps {
   isLoaded: boolean;
   isScrolled: boolean
   setIsLoaded: (loaded: boolean) => void;
+  loading: boolean;
+  isLoading: (loader: boolean) => void
 }
 
 const ScreenContext = createContext<ScreenContextProps | undefined>(undefined);
@@ -17,6 +19,7 @@ export const ScreenProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [horizontalMob, setHorizontalMob] = useState(window.innerHeight < 550);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [loading, isLoading] = useState(false)
 
   useEffect(() => {
     const handleMobile = () => setIsMobile(window.innerWidth < 768);
@@ -43,7 +46,7 @@ export const ScreenProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
   return (
-    <ScreenContext.Provider value={{ isMobile, vertical, isLoaded, isScrolled, horizontalMob, setIsLoaded }}>
+    <ScreenContext.Provider value={{ isMobile, vertical, isLoaded, isScrolled, horizontalMob, setIsLoaded, loading, isLoading }}>
       {children}
     </ScreenContext.Provider>
   );
