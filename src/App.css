@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+@font-face {
+  font-family: 'Stencilia-Bold';
+  src: url('./path-to-font/stencilia-bold.woff2') format('woff2');
+}
