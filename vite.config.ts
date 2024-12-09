@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  base: '/newPortfolio/', // Substitua pelo nome do repositório
+  base: '/my-portfolio/', // Caminho do repositório para deploy no GitHub Pages
   plugins: [react()],
   resolve: {
     alias: {
