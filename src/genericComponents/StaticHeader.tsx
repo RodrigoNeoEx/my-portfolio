@@ -5,7 +5,7 @@ const StaticHeader = () => {
           <div className="hidden md:flex space-x-6">
             <a href="#home" className="hover:text-lime-400 font-sten">Home</a>
             <a href="#about" className="hover:text-lime-400 font-sten">About</a>
-            <a href="#projects" className="hover:text-lime-400 font-sten">Projects</a>
+            <a href="#portfolio" className="hover:text-lime-400 font-sten">Portfolio</a>
             <a href="#contact" className="hover:text-lime-400 font-sten">Contact</a>
           </div>
         </nav>

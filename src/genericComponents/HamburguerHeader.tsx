@@ -1,15 +1,19 @@
-import { useState } from 'react';
+import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScreen } from '../context/ScreenContext';
 
-type HamburguerHeaderProps = {
-  lineText: string[];
-}
-
-const HamburguerHeader = ({lineText}: HamburguerHeaderProps) => {
+const HamburguerHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { vertical } = useScreen();
+
+  const menu = [
+    { name: "Home", id: "#home" },
+    { name: "About", id: "#about" },
+    { name: "Portfolio", id: "#portfolio" },
+    { name: "Contact", id: "#contact" },
+  ];
+  
 
 
   const navContainer = {
@@ -94,10 +98,10 @@ const HamburguerHeader = ({lineText}: HamburguerHeaderProps) => {
               exit="hidden"
               variants={navList}
             >             
-              {lineText.map((iten, i) => {  
+              {menu.map((item, i)  => {                  
                 return (
                 <motion.li className="nav-item py-1" variants={navItem} key={i}>
-                  <a href="#home" className={`block text-center hover:text-lime-400 ${!vertical ? "text-lg" : "text-4xl"} font-sten`}>{iten}</a>                 
+                  <a href={item.id} className={`block text-center hover:text-lime-400 ${!vertical ? "text-lg" : "text-4xl"} font-sten`}>{item.name}</a>                 
                 </motion.li>
                 )
               })}              

@@ -5,7 +5,7 @@ import { useScreen } from "../context/ScreenContext";
 const About = () => {
     const { isMobile, vertical, isLoaded, setIsLoaded, horizontalMob } = useScreen(); 
     return (
-        <section className="bg-black py-28 px-8">
+        <section id="about" className="bg-black py-28 px-8">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"> 
                 <div className="relative flex justify-center items-center w-[300px] h-[300px] mx-auto">
                     <motion.div

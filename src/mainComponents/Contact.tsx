@@ -43,7 +43,7 @@ const Contact = () => {
     };      
     
     return (
-        <section className={`${contactColor ? "bg-black py-56" : "bg-white py-20"}  px-8 font-helv font-bold relative`}>
+        <section id="contact" className={`${contactColor ? "bg-black py-56" : "bg-white py-20"}  px-8 font-helv font-bold relative`}>
             <div className={`container mx-auto grid ${isMobile ? "grid-cols-1" : "grid-cols-2" } gap-8 items-center`}>
                 <div 
                     className={`p-8 rounded-lg bg-black ${contactColor 
