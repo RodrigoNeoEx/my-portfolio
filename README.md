@@ -1,50 +1,82 @@
-# React + TypeScript + Vite
+# Meu Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de portfólio pessoal criado para demonstrar minhas experiências anteriores, servir como um currículo online e receber contatos de potenciais interessados.
 
-Currently, two official plugins are available:
+## 🌟 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Apresentação de experiências e projetos anteriores.
+- Currículo interativo com design moderno.
+- Formulário de contato funcional para facilitar conexões.
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+As principais tecnologias e bibliotecas utilizadas no desenvolvimento do projeto são:
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **Tailwind CSS**: Framework CSS para estilização.
+- **Material Tailwind**: Componentes estilizados baseados em Material Design.
+- **Framer Motion**: Biblioteca para animações e transições fluidas.
+- **Axios**: Biblioteca para comunicação com APIs.
+- **React Hook Form**: Gerenciamento de formulários e validação.
+- **Yup**: Validação de formulários.
+- **TW Elements**: Componentes adicionais para Tailwind CSS.
+- **Vite**: Ferramenta de build rápida e moderna.
+- **TypeScript**: Superset de JavaScript para maior segurança no desenvolvimento.
+- **ESLint**: Ferramenta para análise estática do código.
+- **PostCSS**: Processamento avançado de estilos CSS.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Como Rodar o Projeto
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Para rodar o projeto localmente, siga os passos abaixo:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clone este repositório:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+
+2. Acesse a pasta do projeto
+
+  ``bash
+  cd meu-portfolio
+
+3. Acesse a pasta do projeto
+
+  ``bash
+  npm install
+
+4. Acesse a pasta do projeto
+
+  ``bash
+  npm run dev
+
+5. Abra o navegador em: http://localhost:5173
+
+## 🌐 Deploy
+
+O projeto está publicado na plataforma Vercel e pode ser acessado no link abaixo:
+
+[Vercel - Meu Portfólio](https://neoex-portfolio.vercel.app/)
+
+> **Nota**: O deploy via GitHub Pages apresentou problemas de segurança, por isso utilizei a Vercel como alternativa.
+
+## 📂 Estrutura de Pastas
+
+A estrutura principal do projeto é organizada da seguinte forma:
+
+```bash
+/public
+/src
+  /assets
+  /context
+  /genericComponents
+  /components
+  /mainComponents
+
+## 👤 Autor
+
+Desenvolvido com ❤️ por **Seu Nome**.  
+Entre em contato comigo pelo [LinkedIn](https://www.linkedin.com/in/rodrigocamargo-neoex/) ou envie um e-mail para: **draja.acc@gmail.com**.
+
+
+
+
