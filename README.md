@@ -36,17 +36,17 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 2. Acesse a pasta do projeto
 
-  ``bash
+  ```bash
   cd meu-portfolio
 
 3. Acesse a pasta do projeto
 
-  ``bash
+  ```bash
   npm install
 
 4. Acesse a pasta do projeto
 
-  ``bash
+  ```bash
   npm run dev
 
 5. Abra o navegador em: http://localhost:5173
@@ -63,18 +63,19 @@ O projeto está publicado na plataforma Vercel e pode ser acessado no link abaix
 
 A estrutura principal do projeto é organizada da seguinte forma:
 
-```bash
-/public
-/src
-  /assets
-  /context
-  /genericComponents
-  /components
-  /mainComponents
+  ```bash
+  /public
+  /src
+    /assets
+    /context
+    /genericComponents
+    /components
+    /mainComponents
+
 
 ## 👤 Autor
 
-Desenvolvido com ❤️ por **Seu Nome**.  
+Desenvolvido com ❤️ por **Rodrigo Camargo**.  
 Entre em contato comigo pelo [LinkedIn](https://www.linkedin.com/in/rodrigocamargo-neoex/) ou envie um e-mail para: **draja.acc@gmail.com**.
 
 
