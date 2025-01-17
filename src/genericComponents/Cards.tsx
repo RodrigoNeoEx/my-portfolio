@@ -92,7 +92,7 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLi
           placeholder={undefined}
           onPointerEnterCapture={undefined} 
           onPointerLeaveCapture={undefined}
-          className="bg-lime-400 text-black font-helv hover:animate-pulse absolute bottom-[-1rem] right-2 h-auto w-[20rem] text-xl font-black"         
+          className="bg-lime-400 text-black font-bold font-helv hover:animate-pulse"         
         >
           {cardButtonText}
         </Button>
