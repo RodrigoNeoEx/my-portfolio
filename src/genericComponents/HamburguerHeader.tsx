@@ -5,7 +5,7 @@ import { useScreen } from '../context/ScreenContext';
 
 const HamburguerHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { vertical } = useScreen();
+  const { isMobile } = useScreen();
 
   const menu = [
     { name: "Home", id: "#home" },
@@ -101,7 +101,7 @@ const HamburguerHeader = () => {
               {menu.map((item, i)  => {                  
                 return (
                 <motion.li className="nav-item py-1" variants={navItem} key={i}>
-                  <a href={item.id} className={`block text-center hover:text-lime-400 ${!vertical ? "text-lg" : "text-4xl"} font-sten`}>{item.name}</a>                 
+                  <a href={item.id} className={`block text-center hover:text-lime-400 ${isMobile ? "text-lg" : "text-4xl"} font-sten`}>{item.name}</a>                 
                 </motion.li>
                 )
               })}              

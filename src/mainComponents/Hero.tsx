@@ -1,17 +1,20 @@
 import { motion } from 'framer-motion';
-import Video from '../assets/Video';
 import { useScreen } from "../context/ScreenContext";
-import VideoMobile from '../assets/VideoMobile';
+import TypingEffect from '../genericComponents/TypingEffect';
+import AnimationIcons from '@/genericComponents/AnimationIcons';
+
 
 const Hero = () => {
-  const { isMobile, vertical, isLoaded, setIsLoaded, horizontalMob } = useScreen();
+  const { isMobile, vertical, horizontalMob } = useScreen();
+  const expertise = ['Project Manager', 'FrontEnd Developer', 'FullStack Developer', 'Scrum Master', 'Tech Lead'];
+
 
   return (
-    <section id="home" className={`bg-black text-white min-h-screen flex flex-col ${isMobile ? "items-center justify-start pt-16" : "px-20 items-start pt-12 justify-center "}`}>  
-      <div className={`${isMobile ? "space-y-2 m-5" : "space-y-4 w-3/6"}`}>
-        <div className='z-10 relative'>
+    <section id="home" className={`bg-black text-white min-h-screen min-w-[100vw]`}>  
+      <div className={`${isMobile ? "flex-col" : "flex-row"} min-h-screen min-w-[100vw] flex items-center justify-center`}>
+        <div className="ml-4 mt-12">
           <motion.h1
-            className={`${isMobile || horizontalMob ? "text-6xl leading-none" : "text-9xl leading-tight"} font-sten `}
+            className={`font-sten leading-none text-[4rem] xl:text-[6rem]`}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
@@ -21,34 +24,31 @@ const Hero = () => {
           
           <motion.h2
             className={`
-              ${isMobile || horizontalMob ? "text-6xl leading-none" : "text-9xl leading-tight"} font-sten text-lime-400`} 
+               font-sten text-lime-400 leading-none text-[2.75rem] xl:text-[4rem] `} 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
           >
-            I'm Rodrigo <span className="text-white">'NeoEx'</span>
+            My name is Rodrigo <span className="text-white">'NeoEx'</span>
           </motion.h2>        
-        </div>          
-          { isMobile
-          ? <div className={`transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} z-0 bottom-0`}>
-              <VideoMobile onLoaded={() => setIsLoaded(true)}/>
-            </div>
-          : <div className={`transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} z-0`}>
-              <Video onLoaded={() => setIsLoaded(true)}/>
-            </div>
-          }          
-      </div>
-      <div className={`flex flex-col md:flex-row justify-between w-full m-2 z-10 relative ${isMobile && vertical ? "pl-20 mt-0" : ""}`}>   
         <motion.div
-          className={`text-4xl md:text-5xl font-helv ${isMobile && vertical ? "pl-6" : "pl-4"}`}
+          className={` font-helv text-[2rem] leading-7 mt-2 xl:text-[2.5rem] xl:leading-9`}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-        >     
-          <p className='text-6x1'>Project Mananger & </p>
-          <p>FrontEnd Developer</p>  
+        >
+          <h1>I have experience as:</h1>     
+          <TypingEffect expertise={expertise}/>
         </motion.div>       
-      </div>  
+     
+        </div>
+        <div 
+         className={`z-0`}>
+    
+            <AnimationIcons />
+            {/* <img src={teste2} alt="teste2" className="w-auto h-auto max-h-[70%] absolute top-48 right-48"/> */}
+          </div>          
+      </div>
     </section>
   );
 };

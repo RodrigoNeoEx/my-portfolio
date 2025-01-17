@@ -45,7 +45,7 @@ const Portfolio = () => {
   
     return (
       <>
-        <section id="portfolio" className="bg-gradient-to-b from-black to-white">          
+        <section id="portfolio" className="bg-gradient-to-b from-black to-white min-w-[100vw]">          
           <div className="container mx-auto text-center py-32 w-full">
             <h2 className="text-6xl font-bold mb-8 text-lime-400 font-sten">Portfolio</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center">

@@ -11,7 +11,7 @@ mock.onGet('/portfolioCards').reply(200, {
     portfolio: [
         {
             title: "Project Mananger", 
-            body: "In a short time as a Project Manager, I successfully initiated and completed various projects, including the implementation of a CRM, the development of a partnerships platform, and the restructuring of an educational CRM. This experience has equipped me to lead multidisciplinary teams, optimize processes, reduce costs, and ensure strategic deliveries aligned with business goals",
+            body: "With around 18 months of experience as a Project Manager, I led multidisciplinary teams made up of 4 to 12 members, managing up to three projects simultaneously and achieving significant results. Among the projects successfully completed are the implementation of a school CRM, the development of an internal platform for issuing, consulting and editing invoices, in addition to the restructuring of a medical insurance system, among others. My trajectory is marked by process optimization, cost reduction and strategic deliveries aligned with business objectives, with emphasis on my strong organizational and team leadership skills.",
             button:"See my projects",
             link:"",
             functionId: "projectMananger",
@@ -19,7 +19,7 @@ mock.onGet('/portfolioCards').reply(200, {
         },
         {
             title: "FrontEnd Developer", 
-            body: "As a Front-End Developer, I have successfully contributed to the creation and optimization of responsive, user-friendly interfaces for diverse projects. My experience includes implementing dynamic web applications, enhancing UI/UX designs, and collaborating with cross-functional teams to deliver high-quality digital products. This has equipped me with a strong ability to translate complex requirements into efficient and visually appealing solutions.",
+            body: "As a Front-End Developer, I have contributed significantly to the creation and optimization of responsive, intuitive and visually attractive interfaces in several projects. My experience ranges from implementing dynamic web applications to improving UI/UX designs, always aligned with the best market practices. Additionally, I collaborated closely with cross-functional teams to deliver high-quality digital products, translating complex requirements into efficient solutions. I stand out for my ability to conduct dailies in a clear and productive way, in addition to actively supporting other team members, promoting an environment of collaboration and growth. My role also includes active leadership, encouraging agile practices and ensuring alignment between the team and the project objectives.",
             button:"See my projects",
             link:"",
             functionId: "frontEnd",
@@ -73,14 +73,14 @@ mock.onGet('/portfolioCards').reply(200, {
     projectMananger: [
         {
             title: 'Advice System - Matricula',
-            body: "Conducted strategic meetings with directors and different areas, ensuring alignment and complete monitoring in pipeline management. Led the architecture of a school CRM, expanding the product portfolio from a single item to a wide range of solutions. This strategy consolidated the company as the main candidate for new projects, strengthening its position in the market and expanding its business opportunities.",
+            body: "Conducted strategic meetings with directors and different areas, ensuring alignment and complete monitoring in pipeline management. Led the architecture of a school CRM, expanding the product portfolio from a single item to a wide range of solutions. This strategy consolidated my company as the main candidate for new projects, strengthening its position in the market and expanding its business opportunities. Project executed with a team of 12 developers.",
             button: 'See the Employer',
             link: 'https://www.advicesystem.com.br/home',
             image: "/assets/advice.png"
         },
         {
             title: 'Advice System - Folha',
-            body: "I carried out complete monitoring of the project (end-to-end), monitoring tasks, team productivity and integration into the platform. We lead the modernization of a legacy system, transforming your database into a modern and efficient solution, aligned with customer needs and expectations.",
+            body: "I carried out complete monitoring of the project (end-to-end), monitoring tasks, team productivity and integration into the platform. We lead the modernization of a legacy system, transforming your database into a modern and efficient solution, aligned with customer needs and expectations. Project executed with a team of 6 developers.",
             button: 'See the Employer',
             link: 'https://www.advicesystem.com.br/home',
             image: "/assets/advice.png"
@@ -94,14 +94,14 @@ mock.onGet('/portfolioCards').reply(200, {
         },
         {
             title: 'Wiz Saúde',
-            body: 'I coordinated and actively worked on integration, development and internal communication. We developed a new platform that optimized processes and managed developers and high-impact tasks. As a highlight, I eliminated an accumulated backlog of a year in just three months, enabling the creation of contractual amendments and expanding the scope of the project, generating significant value for the organization.',
+            body: 'I coordinated and actively worked on integration, development and internal communication. We developed a new platform that optimized processes and managed developers and high-impact tasks. As a highlight, I eliminated an accumulated backlog of a year in just three months, enabling the creation of contractual amendments and expanding the scope of the project, generating significant value for the organization. Project executed with a team of 2 developers.',
             button: 'See the Employer',
             link: 'https://wizmaisvoce.com.br/',
             image: "/assets/wiz.png"
         },
         {
             title: 'QualityWay',
-            body: "I started my activities here as a developer and little by little I implemented agile methodologies that resulted in a 70% reduction in the backlog and the optimization of the team structure, generating a reduction in costs and a significant increase in operational efficiency. I integrated internal and outsourced teams, using Azure as a central management platform, which promoted a more aligned, collaborative and productive workflow.",
+            body: "I started my activities here as a developer and little by little I implemented agile methodologies that resulted in a 70% reduction in the backlog and the optimization of the team structure, generating a reduction in costs and a significant increase in operational efficiency. I integrated internal and outsourced teams, using Azure as a central management platform, which promoted a more aligned, collaborative and productive workflow. Project executed with a team of 16 developers.",
             button: 'See the Employer',
             link: 'https://qualityway.com.br/',
             image: "/assets/quality.png"

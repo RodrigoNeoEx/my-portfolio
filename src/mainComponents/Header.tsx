@@ -4,7 +4,7 @@ const Header = () => {
   const [hover, setHover] = useState<string | null>(null);
 
   return (
-    <header className="bg-black text-white py-4 px-8 flex justify-between items-center">
+    <header className="bg-black text-white py-4 px-8 flex justify-between items-center min-w-[100vw]">
       {/* Logotipo */}
       <div className="flex items-center">
         <div className="bg-lime-400 rounded-full w-10 h-10 flex items-center justify-center">

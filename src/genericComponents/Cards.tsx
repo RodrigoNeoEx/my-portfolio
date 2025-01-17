@@ -23,7 +23,7 @@ type CardsProps = {
 
 const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLink, cardImage }: CardsProps) => {
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
  
   const toggleOpen = () => setOpen((cur) => !cur);
 
@@ -32,7 +32,7 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLi
       placeholder={undefined} 
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
-      className="mt-6 w-11/12 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 bg-black justify-between shadow-[0_0_10px_1px_rgb(212,225,87,0.55)]"
+      className="mt-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 bg-black  shadow-[0_0_10px_1px_rgb(212,225,87,0.55)]"
     >
       <CardHeader
         placeholder={undefined}
@@ -74,15 +74,15 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLi
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
-            className="text-white font-helv text-lg text-left"
+            className="text-white font-helv text-xl text-left"
           >
             {cardBodyText}
           </Typography>
         </Collapse>
       </CardBody>
-      <div>
+     <div>
+
       <CardFooter 
-        // className="flex justify-center"
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined} 
@@ -92,12 +92,13 @@ const Cards = ({ cardTitle, cardBodyText, cardButtonText, buttonFunction, cardLi
           placeholder={undefined}
           onPointerEnterCapture={undefined} 
           onPointerLeaveCapture={undefined}
-          className="bg-lime-400 text-black font-bold font-helv hover:animate-pulse"         
+          className="bg-lime-400 text-black font-helv hover:animate-pulse absolute bottom-[-1rem] right-2 h-auto w-[20rem] text-xl font-black"         
         >
           {cardButtonText}
         </Button>
       </CardFooter>
-      </div>
+     </div>
+    
     </Card>
   );
 };
