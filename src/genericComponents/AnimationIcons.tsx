@@ -1,7 +1,15 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimate, useInView } from 'framer-motion';
-import teste2 from '../../dist/assets/teste2.png';
+import teste2 from '../assets/teste2.png';
 import { useScreen } from '@/context/ScreenContext';
+import angular from '../assets/angular.png'
+import html from '../assets/html.png'
+import js from '../assets/js.png'
+import node from '../assets/nodejs.png'
+import react from '../assets/react.png'
+import tail from '../assets/tail.png'
+import ts from '../assets/ts.png'
+import azure from '../assets/azure.jpg'
 
 interface Icon {
   src: string;
@@ -9,14 +17,14 @@ interface Icon {
 }
 
 const icons: Icon[] = [
-  { src: '../../dist/assets/angular.png', alt: 'Angular' },
-  { src: '../../dist/assets/azure.jpg', alt: 'HTML' },
-  { src: '../../dist/assets/html.png', alt: 'JavaScript' },
-  { src: '../../dist/assets/nodejs.png', alt: 'Node.js' }, 
-  { src: '../../dist/assets/react.png', alt: 'React' },
-  { src: '../../dist/assets/tailwind.png', alt: 'Tailwind' },
-  { src: '../../dist/assets/typescript.png', alt: 'TypeScript' },
-  { src: '../../dist/assets/javascript.png', alt: 'Azure' },
+  { src: angular, alt: 'Angular' },
+  { src: html, alt: 'HTML' },
+  { src: js, alt: 'JavaScript' },
+  { src: node, alt: 'Node.js' }, 
+  { src: react, alt: 'React' },
+  { src: tail, alt: 'Tailwind' },
+  { src: ts, alt: 'TypeScript' },
+  { src: azure, alt: 'Azure' },
 ];
 
 const AnimationIcons: React.FC = () => {
