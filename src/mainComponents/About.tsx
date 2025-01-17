@@ -2,9 +2,10 @@ import { Suspense } from "react";
 import { motion } from "framer-motion";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useScreen } from "../context/ScreenContext";
+import animation from '../assets/animation.json'
 
 
-import animationData from "../../public/assets/Animation.json";
+
 
 const About = () => {
   const { isMobile, horizontalMob } = useScreen();
@@ -23,7 +24,7 @@ const About = () => {
           <Player
             autoplay
             loop
-            src={animationData}
+            src={animation}
             style={{ height: "auto", width: `${isMobile || horizontalMob ? "20rem" : "40vw" }` }}
           />
         </Suspense>
