@@ -4,7 +4,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { useScreen } from "../context/ScreenContext";
 
 
-import animationData from "/src/dist/assets/Animation.json";
+import animationData from "../../public/assets/Animation.json";
 
 const About = () => {
   const { isMobile, horizontalMob } = useScreen();
