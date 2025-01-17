@@ -12,7 +12,7 @@ const icons: Icon[] = [
   { src: '../../dist/assets/angular.png', alt: 'Angular' },
   { src: '../../dist/assets/azure.jpg', alt: 'HTML' },
   { src: '../../dist/assets/html.png', alt: 'JavaScript' },
-  { src: '../../dist/assets/nodejs.png', alt: 'Node.js' },
+  { src: '../../dist/assets/nodejs.png', alt: 'Node.js' }, 
   { src: '../../dist/assets/react.png', alt: 'React' },
   { src: '../../dist/assets/tailwind.png', alt: 'Tailwind' },
   { src: '../../dist/assets/typescript.png', alt: 'TypeScript' },
